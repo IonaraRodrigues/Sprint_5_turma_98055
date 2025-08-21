@@ -31,7 +31,11 @@ function SetCarToCompare(el, carClass) {
    
     if(carClass instanceof Car){       
         if(el.checked){
-                
+            if (carArr.lenght >= 2){
+                 el.checked = false; 
+                 alert("Você só pode comparar dois veículos por vez!")
+                 return;
+            }   
             
         } else {
           
